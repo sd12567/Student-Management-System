@@ -53,7 +53,7 @@ class login_view(ctk.CTk):
         
         # sign in button:-
 
-        self.signin_button = ctk.CTkButton(self.tabview.tab("SIGN IN"),text='Sign in',width=135,height=40,command=self.view_model.signin)
+        self.signin_button = ctk.CTkButton(self.tabview.tab("SIGN IN"),text='Sign in',width=135,height=40,corner_radius=15,command=self.view_model.signin)
         self.signin_button.place(relx=0.5,rely=0.75,anchor='center')
 
         self.pwdsignin_entry.bind("<Return>", lambda event: self.on_enter_key_signin(event))
@@ -95,7 +95,7 @@ class login_view(ctk.CTk):
         
         #sign up button:-
 
-        self.signup_button = ctk.CTkButton(self.tabview.tab("SIGN UP"), text='Sign up', width=135, height=40,command=self.view_model.register)
+        self.signup_button = ctk.CTkButton(self.tabview.tab("SIGN UP"), text='Sign up', width=135, height=40,corner_radius=15,command=self.view_model.register)
         self.signup_button.place(relx=0.5, rely=0.875, anchor='center')
 
         self.pwdsignup_entry.bind("<Return>", lambda event: self.on_enter_key_signup(event))

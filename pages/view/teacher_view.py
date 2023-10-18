@@ -25,51 +25,51 @@ class StudentManagementApp(ctk.CTkToplevel):
         #widgets in the teachers page:-
 
         self.roll_label = ctk.CTkLabel(self.frame,text = 'Roll No',corner_radius=10,width=50,height=35,font=("Century Gothic", 15, "bold"))
-        self.roll_label.place(relx=0.02,rely=0.075)
+        self.roll_label.place(relx=0.035,rely=0.075)
         self.roll_entry = ctk.CTkEntry(self.frame,height=40,width=250,textvariable=self.view_model.roll)
-        self.roll_entry.place(relx=0.255,rely=0.075)
+        self.roll_entry.place(relx=0.275,rely=0.075)
 
 
         self.name_label = ctk.CTkLabel(self.frame,text = 'Name',corner_radius=10,width=50,height=35,font=("Century Gothic", 15, "bold"))
-        self.name_label.place(relx=0.02,rely=0.175)
+        self.name_label.place(relx=0.035,rely=0.175)
         self.name_entry = ctk.CTkEntry(self.frame,height=40,width=250,textvariable=self.view_model.name)
-        self.name_entry.place(relx=0.255,rely=0.175)
+        self.name_entry.place(relx=0.275,rely=0.175)
 
 
         self.dept_label = ctk.CTkLabel(self.frame,text = 'Department',corner_radius=10,width=50,height=35,font=("Century Gothic", 15, "bold"))
-        self.dept_label.place(relx=0.02,rely=0.275)
+        self.dept_label.place(relx=0.035,rely=0.275)
         self.dept_entry = ctk.CTkEntry(self.frame,height=40,width=250,textvariable=self.view_model.dept   )
-        self.dept_entry.place(relx=0.255,rely=0.275)
+        self.dept_entry.place(relx=0.275,rely=0.275)
 
 
         self.year_label = ctk.CTkLabel(self.frame,text = 'Year',corner_radius=10,width=50,height=35,font=("Century Gothic", 15, "bold"))
-        self.year_label.place(relx=0.02,rely=0.375)
+        self.year_label.place(relx=0.035,rely=0.375)
         self.year_entry = ctk.CTkEntry(self.frame,height=40,width=250,textvariable=self.view_model.year)
-        self.year_entry.place(relx=0.255,rely=0.375)
+        self.year_entry.place(relx=0.275,rely=0.375)
 
 
         self.sem_label = ctk.CTkLabel(self.frame,text = 'Semester',corner_radius=10,width=50,height=35,font=("Century Gothic", 15, "bold"))
-        self.sem_label.place(relx=0.02,rely=0.475)
+        self.sem_label.place(relx=0.035,rely=0.475)
         self.sem_entry = ctk.CTkEntry(self.frame,height=40,width=250,textvariable=self.view_model.sem)
-        self.sem_entry.place(relx=0.255,rely=0.475)
+        self.sem_entry.place(relx=0.275,rely=0.475)
 
 
         self.dob_label = ctk.CTkLabel(self.frame,text = 'DOB',corner_radius=10,width=50,height=35,font=("Century Gothic", 15, "bold"))
-        self.dob_label.place(relx=0.02,rely=0.575)
+        self.dob_label.place(relx=0.035,rely=0.575)
         self.dob_entry = ctk.CTkEntry(self.frame,height=40,width=250,textvariable=self.view_model.dob)
-        self.dob_entry.place(relx=0.255,rely=0.575)
+        self.dob_entry.place(relx=0.275,rely=0.575)
 
 
         self.sgpa_label = ctk.CTkLabel(self.frame,text = 'SGPA',corner_radius=10,width=50,height=35,font=("Century Gothic", 15, "bold"))
-        self.sgpa_label.place(relx=0.02,rely=0.675)
+        self.sgpa_label.place(relx=0.035,rely=0.675)
         self.sgpa_entry = ctk.CTkEntry(self.frame,height=40,width=250,textvariable=self.view_model.sgpa)
-        self.sgpa_entry.place(relx=0.255,rely=0.675)
+        self.sgpa_entry.place(relx=0.275,rely=0.675)
 
 
         self.attend_label = ctk.CTkLabel(self.frame,text = 'Attendance',corner_radius=10,width=50,height=35,font=("Century Gothic", 15, "bold"))
-        self.attend_label.place(relx=0.02,rely=0.775)
+        self.attend_label.place(relx=0.035,rely=0.775)
         self.attend_entry = ctk.CTkEntry(self.frame,height=40,width=250,textvariable=self.view_model.attend)
-        self.attend_entry.place(relx=0.255,rely=0.775)
+        self.attend_entry.place(relx=0.275,rely=0.775)
 
         self.entry_status_label=ctk.CTkLabel(self.frame,textvariable=self.view_model.entry_status,text_color='red',font=('Arial', 10, 'bold'))
         self.entry_status_label.place(relx=0.255,rely=0.830)
@@ -77,18 +77,20 @@ class StudentManagementApp(ctk.CTkToplevel):
 
         #button widgets in the teachers page:-
 
-        self.add_button = ctk.CTkButton(self.frame,text='ADD',width=125,height=35,command=self.view_model.add)
+        self.add_button = ctk.CTkButton(self.frame,text='ADD',width=125,height=35,command=self.view_model.add,corner_radius=15)
         self.add_button.place(relx=0.045,rely=0.9)
 
-        self.update_button = ctk.CTkButton(self.frame,text='UPDATE',width=125,height=35,command=self.view_model.update)
+        self.update_button = ctk.CTkButton(self.frame,text='UPDATE',width=125,height=35,command=self.view_model.update,corner_radius=15)
         self.update_button.place(relx=0.345,rely=0.9)
 
-        self.del_button = ctk.CTkButton(self.frame,text='DELETE',width=125,height=35,command=self.view_model.delete)
+        self.del_button = ctk.CTkButton(self.frame,text='DELETE',width=125,height=35,command=self.view_model.delete,corner_radius=15)
         self.del_button.place(relx=0.645,rely=0.9)
 
 
             #2nd frame starts here for the search section:-
 
+
+        
         self.frame2 = ctk.CTkFrame(self,width=1325,height=750)
         self.frame2.place(relx=0.29,rely=0.035)
 
@@ -96,19 +98,20 @@ class StudentManagementApp(ctk.CTkToplevel):
         #widgets in the search section of teachers page:-
 
         self.search_label = ctk.CTkLabel(self.frame2,text='Search by ',corner_radius=10,width=100,height=15,font=("Century Gothic", 15, "bold"))
-        self.search_label.place(relx=0.08,rely=0.11, anchor='center')
+        self.search_label.place(relx=0.085,rely=0.105, anchor='center')
 
         self.optionmenu = ctk.CTkOptionMenu(self.frame2,values=['Name','Roll No.'],width=110,height=25,variable=self.view_model.search_menu)
         self.optionmenu.place(relx=0.135,rely=0.09)
 
-
-        self.search_entry = ctk.CTkEntry(self.frame2,height=35,width=250,textvariable=self.view_model.field_search_var,corner_radius=5)
+        self.search_frame=ctk.CTkFrame(self.frame2,height=50,width=320,border_color='blue',border_width=1)
+        self.search_frame.place(relx=0.370,rely=0.075)
+        self.search_entry = ctk.CTkEntry(self.frame2,height=35,width=250,textvariable=self.view_model.field_search_var,corner_radius=5,border_color='blue',border_width=1)
         self.search_entry.place(relx=0.375,rely=0.0865)
 
         self.search_status=ctk.CTkLabel(self.frame2,textvariable=self.view_model.search_status,text_color='red',font=('Arial', 10, 'bold'))
-        self.search_status.place(relx=0.375,rely=0.136)
+        self.search_status.place(relx=0.37,rely=0.145)
 
-        self.search_button = ctk.CTkButton(self.frame2, text='Search',width=50,height=34,corner_radius=5,command=self.view_model.search)
+        self.search_button = ctk.CTkButton(self.frame2, text='Search',width=50,height=34,command=self.view_model.search)
         self.search_button.place(relx=0.565, rely=0.0865)
         self.search_entry.bind("<Return>", lambda event: self.on_enter_key_search(event))
         self.name_entry.bind("<Insert>",lambda event:self.on_insert_key(event))
@@ -140,7 +143,7 @@ class StudentManagementApp(ctk.CTkToplevel):
         
         #refresh button:-
 
-        self.refresh_button = ctk.CTkButton(self.frame2,text='Refresh',width=120,height=35,command=self.view_model.refresh)
+        self.refresh_button = ctk.CTkButton(self.frame2,text='Refresh',corner_radius=15,width=90,height=35,command=self.view_model.refresh)
         self.refresh_button.place(relx=0.85,rely=0.025)
 
 
