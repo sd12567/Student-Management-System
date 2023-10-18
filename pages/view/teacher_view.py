@@ -53,7 +53,6 @@ class StudentManagementApp(ctk.CTkToplevel):
         self.sem_entry = ctk.CTkEntry(self.frame,height=40,width=250,textvariable=self.view_model.sem)
         self.sem_entry.place(relx=0.275,rely=0.475)
 
-
         self.dob_label = ctk.CTkLabel(self.frame,text = 'DOB',corner_radius=10,width=50,height=35,font=("Century Gothic", 15, "bold"))
         self.dob_label.place(relx=0.035,rely=0.575)
         self.dob_entry = ctk.CTkEntry(self.frame,height=40,width=250,textvariable=self.view_model.dob)
