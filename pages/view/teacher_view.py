@@ -87,7 +87,7 @@ class StudentManagementApp(ctk.CTkToplevel):
         self.del_button.place(relx=0.645,rely=0.9)
 
 
-            #2nd frame starts here for the search section:-
+        #2nd frame starts here for the search section:-
 
 
         
@@ -167,8 +167,6 @@ class StudentManagementApp(ctk.CTkToplevel):
         self.table.destroy()
         self.table = CTkTable( self.scrollable_frame,header_color='gray',hover_color='white',values=self.view_model.table_values,command=(lambda data: self.view_model.table_row_clicked(data)))
         self.table.pack(expand=True, fill="both", padx=15, pady=15)
-        # self.table.bind('<Up>', lambda e: self.on_key(e, 0))
-        # self.table.bind('<Down>', lambda e: self.on_key(e, 0))
 
     def on_close(self,event=None):
             self.destroy()
@@ -185,14 +183,5 @@ class StudentManagementApp(ctk.CTkToplevel):
     
     def on_enter_key(self,event):
          self.update_button.invoke()
-
-
-    # def on_key(self,event, current_row):
-    #     if event.keysym == 'Down' and current_row < len(self.view_model.table_values) - 1:
-    #         current_row += 1
-    #         self.table.select_row(current_row)
-    #     elif event.keysym == 'Up' and current_row > 0:
-    #         current_row -= 1
-    #         self.table.select_row(current_row)
 
  

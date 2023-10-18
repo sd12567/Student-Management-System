@@ -94,7 +94,7 @@ class login_viewmodel:
                      Navigation.add_page('teacher_view',StudentManagementApp(login_service.get_name(query)))
                      self.user_signin.set('')
                      self.pwd_signin.set('')
-                  #  self.open_page()
+                     # self.open_page()
                else:
                   self.signin_status.set('Account not registered')
             else:
