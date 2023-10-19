@@ -128,7 +128,6 @@ class teacher_viewmodel:
                    self.delegate_table_values()
                    self.field_search_var.set('')
               else:
-                   print('Not found')
                    self.search_status.set('Not found')
                    self.table_values=[['ROLL NO','NAME','DEPARTMENT','YEAR','SEMESTER','DATE OF BIRTH','SGPA','ATTENDANCE']]
                    self.delegate_table_values()
@@ -140,7 +139,6 @@ class teacher_viewmodel:
                    self.delegate_table_values()
                    self.field_search_var.set('')
               else:
-                   print('Not found')
                    self.search_status.set('Not found')
                    self.table_values=[['ROLL NO','NAME','DEPARTMENT','YEAR','SEMESTER','DATE OF BIRTH','SGPA','ATTENDANCE']]
                    self.delegate_table_values()
@@ -185,10 +183,8 @@ class teacher_viewmodel:
                 self.dept.set('')
             else:
                 self.entry_status.set('Roll number already exists!!')
-                print('Student with same Roll number exists')
         else:
              self.entry_status.set('Fill in all fields')
-             print('Fill in all fields')
         
         
 
